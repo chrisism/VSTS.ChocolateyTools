@@ -1,0 +1,71 @@
+{
+	"manifestVersion": 1,
+	"id": "jungit-choco",
+	"version": "1.0.1",
+	"name": "Chocolatey Tools",
+	"scopes": [],
+	"description": "Chocolatey tools to be used during a release using VSTS/TFS",
+	"publisher": "jungeriusit",
+	"baseUri": "https://github.com/chrisism/",
+	"icons": {
+		"default": "img/logo.png"
+	},
+	"targets": [
+		{
+			"id": "Microsoft.VisualStudio.Services"
+		}
+	],
+	"tags": [
+		"choco",
+		"chocolatey",
+		"packages",
+		"software"
+	],
+	"links": {
+		"home": {
+			"uri": "https://github.com/chrisism/VSTS.ChocolateyTools"
+		}
+	},
+	"repository": {
+		"type": "git",
+		"uri": "https://github.com/chrisism/VSTS.ChocolateyTools"
+	},
+	"branding": {
+		"color": "rgb(220, 235, 252)",
+		"theme": "light"
+	},
+	"files": [
+		{ "path": "ChocolateyInstalled" },
+		{ "path": "ChocolateyInstallPackage" }
+	],
+	"content": {
+		"details": {
+			"path": "overview.md"
+		}
+	},
+	"categories": [
+		"Build and release"
+	],
+	"contributions": [
+		{
+			"id": "jungit-chocoinstalled",
+			"targets": [
+				"ms.vss-distributed-task.tasks"
+			],
+			"type": "ms.vss-distributed-task.task",
+			"properties": {
+				"name": "ChocolateyInstalled"
+			}
+		},
+		{
+			"id": "jungit-chocoinstaller",
+			"targets": [
+				"ms.vss-distributed-task.tasks"
+			],
+			"type": "ms.vss-distributed-task.task",
+			"properties": {
+				"name": "ChocolateyInstallPackage"
+			}
+		}
+	]
+}
