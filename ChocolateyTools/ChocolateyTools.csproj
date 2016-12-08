@@ -42,8 +42,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ChocolateyInstalled\ensure.ps1" />
+    <Content Include="ChocolateyInstalled\icon.png" />
     <Content Include="ChocolateyInstalled\task.json" />
     <Content Include="ChocolateyInstallPackage\installpackage.ps1" />
+    <Content Include="ChocolateyInstallPackage\icon.png" />
     <Content Include="ChocolateyInstallPackage\task.json" />
     <Content Include="Build.bat" />
     <None Include="gruntfile.js" />
@@ -55,10 +57,6 @@
     <None Include=".gitignore" />
     <None Include=".tfignore" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="ChocolateyInstalled\icon.png" />
-    <Content Include="ChocolateyInstallPackage\icon.png" />
   </ItemGroup>
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
     <TypeScriptRemoveComments>false</TypeScriptRemoveComments>

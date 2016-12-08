@@ -1,7 +1,7 @@
 {
 	"manifestVersion": 1,
 	"id": "jungit-choco",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"name": "Chocolatey Tools",
 	"scopes": [],
 	"description": "Chocolatey tools to be used during a release using VSTS/TFS",
