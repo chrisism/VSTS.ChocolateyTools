@@ -41,7 +41,7 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ChocolateyInstalled\ensure.ps1" />
+    <Content Include="ChocolateyInstalled\installchoco.ps1" />
     <Content Include="ChocolateyInstalled\icon.png" />
     <Content Include="ChocolateyInstalled\task.json" />
     <Content Include="ChocolateyInstallPackage\installpackage.ps1" />
