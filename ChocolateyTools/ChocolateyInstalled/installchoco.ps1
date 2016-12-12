@@ -14,7 +14,7 @@ if (-not $isChocoInstalled) {
 } elseif ($upgradeIfNeeded.ToLower() -eq "true") {
 	
 	Write-Host "Trying to upgrade Chocolatey"
-	choco upgrade chocolatey
+	choco upgrade chocolatey -y
 } else {
 	Write-Host "Chocolatey already installed. Skipping step."
 }

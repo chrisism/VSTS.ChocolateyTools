@@ -48,6 +48,8 @@
     <Content Include="ChocolateyInstallPackage\icon.png" />
     <Content Include="ChocolateyInstallPackage\task.json" />
     <Content Include="Build.bat" />
+    <Content Include="screenshot-01.jpg" />
+    <Content Include="screenshot-02.jpg" />
     <None Include="gruntfile.js" />
     <Content Include="overview.md" />
     <None Include="license.md" />
