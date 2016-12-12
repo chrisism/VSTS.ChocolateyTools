@@ -3,7 +3,7 @@
 	"name": "ChocoInstallPackage",
 	"friendlyName": "Chocolatey - Install Package",
 	"description": "Installs a package using Chocolatey",
-	"author": "Jungerius-IT",
+	"author": "Jungerius IT",
 	"helpMarkDown": "",
 	"category": "Deploy",
 	"visibility": [
@@ -13,7 +13,7 @@
 	"version": {
 		"Major": "1",
 		"Minor": "0",
-		"Patch": "3"
+		"Patch": "5"
 	},
 	"minimumAgentVersion": "1.83.0",
 	"instanceNameFormat": "Install $(packageId)",

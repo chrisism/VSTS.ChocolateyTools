@@ -11,7 +11,7 @@ if (-not $isChocoInstalled) {
 	
 	Write-Host "Chocolatey installed"
 
-} else if ($upgradeIfNeeded.ToLower() -eq "true") {
+} elseif ($upgradeIfNeeded.ToLower() -eq "true") {
 	
 	Write-Host "Trying to upgrade Chocolatey"
 	choco upgrade chocolatey

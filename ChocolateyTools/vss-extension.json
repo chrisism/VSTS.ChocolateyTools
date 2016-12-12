@@ -1,7 +1,7 @@
 {
 	"manifestVersion": 1,
 	"id": "jungit-choco",
-	"version": "1.0.3",
+	"version": "1.0.5",
 	"name": "Chocolatey Tools",
 	"scopes": [],
 	"description": "Chocolatey tools to be used during a release using VSTS/TFS",
@@ -24,14 +24,31 @@
 	"links": {
 		"home": {
 			"uri": "https://github.com/chrisism/VSTS.ChocolateyTools"
+		},
+		"learn": {
+			"uri": "https://github.com/chrisism/VSTS.ChocolateyTools"
+		},
+		"support": {
+			"uri": "https://github.com/chrisism/VSTS.ChocolateyTools/issues"
+		},
+		"repository": {
+			"uri": "https://github.com/chrisism/VSTS.ChocolateyTools"
 		}
 	},
 	"repository": {
 		"type": "git",
 		"uri": "https://github.com/chrisism/VSTS.ChocolateyTools"
 	},
+	"screenshots": [
+		{
+			"path": "screenshot-01.jpg"
+		},
+		{
+			"path": "screenshot-02.jpg"
+		}
+	],
 	"branding": {
-		"color": "rgb(220, 235, 252)",
+		"color": "rgb(157, 140, 255)",
 		"theme": "light"
 	},
 	"files": [
@@ -41,6 +58,9 @@
 	"content": {
 		"details": {
 			"path": "overview.md"
+		},
+		"license": {
+			"path": "license.md"
 		}
 	},
 	"categories": [

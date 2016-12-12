@@ -50,6 +50,7 @@
     <Content Include="Build.bat" />
     <None Include="gruntfile.js" />
     <Content Include="overview.md" />
+    <None Include="license.md" />
     <None Include="package.json" />
     <None Include="vss-extension.json" />
     <None Include="img\logo.png" />

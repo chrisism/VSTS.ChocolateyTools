@@ -3,7 +3,7 @@
 	"name": "ChocolateyInstaller",
 	"friendlyName": "Chocolatey - Install/Upgrade",
 	"description": "Will download and install/upgrade Chocolatey on the server. Will only install if not already installed.",
-	"author": "Jungerius-IT",
+	"author": "Jungerius IT",
 	"helpMarkDown": "",
 	"category": "Deploy",
 	"visibility": [
@@ -13,7 +13,7 @@
 	"version": {
 		"Major": "1",
 		"Minor": "0",
-		"Patch": "3"
+		"Patch": "5"
 	},
 	"minimumAgentVersion": "1.83.0",
 	"instanceNameFormat": "Install/Upgrade Chocolatey",

@@ -2,6 +2,10 @@
 
 VSTS tasks for using Chocolatey during deployment.
 
+Are these VSTS extensions helping you? 
+
+[![](https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=BSMTZP9VKP8QN)
+
 ### Details
 With these tasks you can use Chocolatey in VSTS or TFS. Either install chocolatey self, or check if it installed, or just
 install one of the many packages available through Chocolatey.
