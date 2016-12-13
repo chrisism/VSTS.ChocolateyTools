@@ -1,11 +1,12 @@
 {
 	"manifestVersion": 1,
 	"id": "jungit-choco",
-	"version": "1.0.6",
+	"version": "1.0.7",
 	"name": "Chocolatey Tools",
 	"scopes": [],
 	"description": "Chocolatey tools to be used during a release using VSTS/TFS",
 	"publisher": "jungeriusit",
+	"public": true, 
 	"baseUri": "https://github.com/chrisism/",
 	"icons": {
 		"default": "img/logo.png"
