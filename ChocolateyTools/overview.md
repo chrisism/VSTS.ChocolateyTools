@@ -26,3 +26,9 @@ Installs a package using Chocolatey.
 #### Available options
 * **Package:** The package ID of the package to install. Check https://chocolatey.org/ for available packages
 * **Version:** Specific version of the package to install. Leave empty if you want to install the latest stable version.
+
+
+## Releases
+
+#### 1.0.8
+- Made tasks available for build pipeline.
