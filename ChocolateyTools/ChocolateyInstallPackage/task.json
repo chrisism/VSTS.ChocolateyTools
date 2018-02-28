@@ -10,13 +10,20 @@
         "Build",
         "Release"
     ],
-    "demands": [ ],
+    "demands": [],
     "version": {
         "Major": "1",
-        "Minor": "0",
-        "Patch": "8"
+        "Minor": "1",
+        "Patch": "0"
     },
     "minimumAgentVersion": "1.83.0",
+    "groups": [
+        {
+            "name": "advanced",
+            "displayName": "Advanced options",
+            "isExpanded": false
+        }
+    ],
     "instanceNameFormat": "Install $(packageId)",
     "inputs": [
         {
@@ -34,6 +41,24 @@
             "defaultValue": "",
             "required": false,
             "helpMarkDown": "Specific version of the package to install. Leave empty if you want to install the latest stable version."
+        },
+        {
+            "name": "alternateSource",
+            "type": "string",
+            "label": "Alternate package source",
+            "defaultValue": "",
+            "required": false,
+            "groupname": "advanced",
+            "helpMarkDown": "The source to find the package(s) to install. Special sources include: ruby, webpi, cygwin, windowsfeatures, and python. To specify more than one source, pass it with a semi-colon separating the values (-e.g. 'source1;source2'). Defaults to default feeds."
+        },
+        {
+            "name": "extraOptions",
+            "type": "string",
+            "label": "Other options",
+            "defaultValue": "",
+            "required": false,
+            "groupname": "advanced",
+            "helpMarkDown": "Add extra options or switches as needed."
         }
     ],
     "execution": {

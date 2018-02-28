@@ -1,6 +1,8 @@
 param (
 	[string]$packageId,
-	[string]$packageVersion
+	[string]$packageVersion,
+	[string]$alternateSource,
+	[string]$extraOptions
 )
 
 $chocoBin = [Environment]::GetEnvironmentVariable("ChocolateyInstall", "Machine") + "\bin"
@@ -27,6 +29,16 @@ $chocoArgs = @()
 if([System.Version]::Parse($chocoVersion) -ge [System.Version]::Parse("0.9.8.33")) {
 	Write-Output "Adding --confirm to arguments passed to Chocolatey"
 	$chocoArgs += @("-y", "")
+}
+
+if($alternateSource -ne "") {
+	Write-Output "Adding -s to arguments passed to Chocolatey"
+	$chocoArgs += @("-s", $alternateSource)
+}
+
+if($extraOptions -ne "") {
+	Write-Output "Adding extra options to arguments passed to Chocolatey"
+	$chocoArgs += @($extraOptions, "")
 }
 
 if (-not $packageVersion) {
