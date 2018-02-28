@@ -28,3 +28,12 @@ Installs a package using Chocolatey.
 * **Version:** Specific version of the package to install. Leave empty if you want to install the latest stable version.
 * **Alternate package source:** The source to find the package(s) to install. Special sources include: ruby, webpi, cygwin, windowsfeatures, and python. To specify more than one source, pass it with a semi-colon separating the values (-e.g. 'source1;source2'). Defaults to default feeds.
 * **Other options:** Add extra options or switches as needed.
+
+
+## Releases
+
+#### 1.0.8
+- Made tasks available for build pipeline.
+
+#### 1.1.0
+- Added support for alternate package source (-s / --source) and you now can add custom other flags as needed.

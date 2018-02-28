@@ -34,3 +34,6 @@ Installs a package using Chocolatey.
 
 #### 1.0.8
 - Made tasks available for build pipeline.
+
+#### 1.1.0
+- Added support for alternate package source (-s / --source) and you now can add custom other flags as needed.
