@@ -46,5 +46,5 @@ if (-not $packageVersion) {
 	& $cinst $packageId $($chocoArgs)
 } else {
 	Write-Output "Installing package $packageId version $packageVersion from the Chocolatey package repository..."
-	& $cinst $packageId -Version $packageVersion $($chocoArgs)
+	& $cinst $packageId --version $packageVersion $($chocoArgs)
 }
