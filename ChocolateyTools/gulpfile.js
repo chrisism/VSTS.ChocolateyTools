@@ -72,13 +72,24 @@ gulp.task('updateVersionInTasks', () => {
 
 gulp.task('createPackage', () => {
 
-    return cp.exec('tfx extension create --manifest-globs vss-extension.json');
+    return cp.exec('tfx extension create --manifest-globs ' + config.package.manifestGlobs);
+});
+
+gulp.task('publishPackage', () => {
+
+    return cp.exec('tfx extension publish --token ' + config.publish.token + ' --auth-type pat --service-url <%= settings.serviceUrl %>');
 });
 
 
 gulp.task('setVersion', gulp.parallel('updateVersionInPackageFile', 'updateVersionInMainJson', 'updateVersionInTasks'));
 gulp.task('semver-up', gulp.series('getVersion', 'setVersion'));
+
 gulp.task('build', gulp.series('semver-up', 'createPackage'));
 gulp.task('build-minor', gulp.series('semver-minor', 'build'));
 gulp.task('build-patch', gulp.series('semver-patch', 'build'));
+
+gulp.task('publish', gulp.series('build', 'publishPackage'));
+gulp.task('publish-minor', gulp.series('semver-minor', 'publish'));
+gulp.task('publish-patch', gulp.series('semver-patch', 'publish'));
+
 gulp.task('default', gulp.series('build'), function () { });
