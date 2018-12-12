@@ -25,7 +25,6 @@ gulp.task('semver-minor', (bc) => {
     return bc();
 });
 
-var packageVersion;
 gulp.task('getVersion', (bc) => {
 
     var pkg = getPackageJson();
@@ -35,22 +34,23 @@ gulp.task('getVersion', (bc) => {
         packageVersion = semver.inc(pkg.version, 'patch');
     }
     
-    console.log('Version package ' + packageVersion);
+    config.version = packageVersion;
+    console.log('Version package ' + config.version);
     return bc();
 });
 
 gulp.task('updateVersionInPackageFile', () => {
-
+    
     return gulp.src('./package.json', { base: './' })
-        .pipe(bump({ version: packageVersion }))
+        .pipe(bump({ version: config.version }))
         .pipe(gulp.dest('./'));
 });
 
 
 gulp.task('updateVersionInMainJson', () => {
-
+    
     return gulp.src('./vss-extension.json', { base: './' })
-        .pipe(bump({ version: packageVersion }))
+        .pipe(bump({ version: config.version }))
         .pipe(gulp.dest('./'));
 });
 
@@ -62,9 +62,9 @@ gulp.task('updateVersionInTasks', () => {
     ], { base: './' })
         .pipe(jeditor({
             "version": {
-                "Major": semver.major(packageVersion),
-                "Minor": semver.minor(packageVersion),
-                "Patch": semver.patch(packageVersion)
+                "Major": semver.major(config.version),
+                "Minor": semver.minor(config.version),
+                "Patch": semver.patch(config.version)
             }
         }))
         .pipe(gulp.dest('./'));
@@ -72,7 +72,7 @@ gulp.task('updateVersionInTasks', () => {
 
 gulp.task('createPackage', () => {
 
-    return cp.execFile('tfx extension create --manifest-globs vss-extension.json');
+    return cp.exec('tfx extension create --manifest-globs vss-extension.json');
 });
 
 
