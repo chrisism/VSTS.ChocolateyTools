@@ -19,6 +19,7 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -47,10 +48,9 @@
     <Content Include="ChocolateyInstallPackage\installpackage.ps1" />
     <Content Include="ChocolateyInstallPackage\icon.png" />
     <Content Include="ChocolateyInstallPackage\task.json" />
-    <Content Include="Build.bat" />
+    <Content Include="gulpfile.js" />
     <Content Include="screenshot-01.jpg" />
     <Content Include="screenshot-02.jpg" />
-    <None Include="gruntfile.js" />
     <Content Include="overview.md" />
     <None Include="license.md" />
     <None Include="package.json" />
