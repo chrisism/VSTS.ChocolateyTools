@@ -31,7 +31,7 @@ gulp.task('getVersion', (bc) => {
     var packageVersion = pkg.version;
 
     if (config.semver !== '') {
-        packageVersion = semver.inc(pkg.version, 'patch');
+        packageVersion = semver.inc(pkg.version, config.semver);
     }
     
     config.version = packageVersion;
