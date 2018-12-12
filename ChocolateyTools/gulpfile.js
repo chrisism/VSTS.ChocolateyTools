@@ -75,11 +75,11 @@ gulp.task('createPackage', () => {
     return cp.exec('tfx extension create --manifest-globs ' + config.package.manifestGlobs);
 });
 
-gulp.task('publishPackage', () => {
+gulp.task('publish', () => {
 
-    return cp.exec('tfx extension publish --token ' + config.publish.token + ' --auth-type pat --service-url <%= settings.serviceUrl %>');
+    var command = 'tfx extension publish --token ' + config.publish.token +' --auth-type pat ---service-url ' + config.publish.galleryUrl;
+    return cp.exec(command);
 });
-
 
 gulp.task('setVersion', gulp.parallel('updateVersionInPackageFile', 'updateVersionInMainJson', 'updateVersionInTasks'));
 gulp.task('semver-up', gulp.series('getVersion', 'setVersion'));
@@ -88,8 +88,8 @@ gulp.task('build', gulp.series('semver-up', 'createPackage'));
 gulp.task('build-minor', gulp.series('semver-minor', 'build'));
 gulp.task('build-patch', gulp.series('semver-patch', 'build'));
 
-gulp.task('publish', gulp.series('build', 'publishPackage'));
-gulp.task('publish-minor', gulp.series('semver-minor', 'publish'));
-gulp.task('publish-patch', gulp.series('semver-patch', 'publish'));
+gulp.task('build-publish', gulp.series('build', 'publish'));
+gulp.task('build-publish-minor', gulp.series('build-minor', 'publish'));
+gulp.task('build-publish-patch', gulp.series('build-patch', 'publish'));
 
 gulp.task('default', gulp.series('build'), function () { });

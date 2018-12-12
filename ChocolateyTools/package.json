@@ -1,7 +1,7 @@
 {
     "name": "jungit-choco",
     "private": true,
-    "version": "1.1.0",
+    "version": "1.1.1",
     "devDependencies": {
         "gulp": "^4.0.0",
         "gulp-bump": "^3.1.1",
