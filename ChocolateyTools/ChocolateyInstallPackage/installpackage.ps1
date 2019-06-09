@@ -2,6 +2,7 @@ param (
 	[string]$packageId,
 	[string]$packageVersion,
 	[string]$alternateSource,
+	[bool]$forceTls12,
 	[string]$extraOptions
 )
 
@@ -24,6 +25,11 @@ if (-not $packageId) {
 
 $chocoVersion = & $choco --version
 Write-Output "Running Chocolatey version $chocoVersion"
+
+if($forceTls12) {
+	Write-Output "Forcing TLS 1.2"
+	[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12 
+}
 
 $chocoArgs = @()
 if([System.Version]::Parse($chocoVersion) -ge [System.Version]::Parse("0.9.8.33")) {

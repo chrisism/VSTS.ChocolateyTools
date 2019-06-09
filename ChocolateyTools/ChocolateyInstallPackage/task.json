@@ -20,36 +20,49 @@
         "isExpanded": false
     }],
     "instanceNameFormat": "Install $(packageId)",
-    "inputs": [{
-        "name": "packageId",
-        "type": "string",
-        "label": "Package",
-        "defaultValue": "",
-        "required": true,
-        "helpMarkDown": "The package ID of the package to install. Check https://chocolatey.org/ for available packages"
-    }, {
-        "name": "packageVersion",
-        "type": "string",
-        "label": "Version",
-        "defaultValue": "",
-        "required": false,
-        "helpMarkDown": "Specific version of the package to install. Leave empty if you want to install the latest stable version."
-    }, {
-        "name": "alternateSource",
-        "type": "string",
-        "label": "Alternate package source",
-        "defaultValue": "",
-        "required": false,
-        "groupname": "advanced",
-        "helpMarkDown": "The source to find the package(s) to install. Special sources include: ruby, webpi, cygwin, windowsfeatures, and python. To specify more than one source, pass it with a semi-colon separating the values (-e.g. 'source1;source2'). Defaults to default feeds."
-    }, {
-        "name": "extraOptions",
-        "type": "string",
-        "label": "Other options",
-        "defaultValue": "",
-        "required": false,
-        "groupname": "advanced",
-        "helpMarkDown": "Add extra options or switches as needed."
+  "inputs": [
+    {
+      "name": "packageId",
+      "type": "string",
+      "label": "Package",
+      "defaultValue": "",
+      "required": true,
+      "helpMarkDown": "The package ID of the package to install. Check https://chocolatey.org/ for available packages"
+    },
+    {
+      "name": "packageVersion",
+      "type": "string",
+      "label": "Version",
+      "defaultValue": "",
+      "required": false,
+      "helpMarkDown": "Specific version of the package to install. Leave empty if you want to install the latest stable version."
+    },
+    {
+      "name": "alternateSource",
+      "type": "string",
+      "label": "Alternate package source",
+      "defaultValue": "",
+      "required": false,
+      "groupname": "advanced",
+      "helpMarkDown": "The source to find the package(s) to install. Special sources include: ruby, webpi, cygwin, windowsfeatures, and python. To specify more than one source, pass it with a semi-colon separating the values (-e.g. 'source1;source2'). Defaults to default feeds."
+    },
+    {
+      "name": "forceTls12",
+      "type": "boolean",
+      "label": "Force TLS 1.2",
+      "defaultValue": false,
+      "required": false,
+      "groupname": "advanced",
+      "helpMarkDown": "Sets [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12 ."
+    },
+    {
+      "name": "extraOptions",
+      "type": "string",
+      "label": "Other options",
+      "defaultValue": "",
+      "required": false,
+      "groupname": "advanced",
+      "helpMarkDown": "Add extra options or switches as needed."
     }],
     "execution": {
         "PowerShell": {
